@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+
+}
+
+.container-head{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    color:#fff;
+    padding: 1.5rem;
+   
+}
+
+.container-head .head-left nav a{
+    margin-left: 1.2rem;
+    font-size: 1.3rem;
+    color:#fff;
+    text-decoration: none;
+   
+}
+
+.container-head .head-right nav a{
+    margin-right: 1.2rem;
+    font-size: 1.3rem;
+    color:#fff;
+    text-decoration: none;
+}
+header{
+   
+}
+
+.main-place {
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -9999;
+}
+.main-place image{
+    position: relative;
+}
+
+.main-place .text{
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    bottom: 0;
+    font-size: 38px;
+    color: #fff;
+}
+
+.writing-main{
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+.writing-main h3{
+    margin-top: 4%;
+    width: 80%;
+    font-weight: 100;
+}
+.open-now{
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+#demo{
+    margin-top: 5%;
+    width: 80%;
+  
+}
+
+.next-para{
+    margin-top: 5%;
+}
+
+.third-para{
+    margin-top: 5%;
+}
+/*
+.image-back {
+    background: url(/pictures/dara-desktop.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    margin-top: 7%;
+  
+}
+.image-back .news-ceo{
+    
+   position: absolute;
+    top: 40%;
+}*/
+
+.grid-template{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 7%;
+    
+}
+.grid-template .image-grid{
+    margin-left: 8%;
+}
+.text-grid{
+    margin: 9%;
+    font-size: 1.3rem;
+
+}
+
+.text-grid p{
+    margin-top: 2%;
+}
+.text-grid h1{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query for tablets or small screens */
+@media (max-width: 768px) {
+    .grid-template {
+      grid-template-columns: repeat(2, 1fr);  /* 2 columns for smaller screens */
+    }
+  }
+  
+  /* Media query for mobile screens */
+  @media (max-width: 480px) {
+    .grid-template {
+      grid-template-columns: 1fr;  /* 1 column for mobile screens */
+    }
+  }

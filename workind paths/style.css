@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2 linear;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+
+
+.main-container{
+    background: url(/pictures/Untitled\ design.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 7%;
+    align-items: center;
+}
+.header #logo img{
+    width: 100%;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+}
+.header .navbar a:hover{
+    background: #ffc61a;
+    padding: .5rem 3rem;
+    border-radius: 19px;
+}
+#menu-bar{
+    color: white;
+    font-size: 2rem;
+    display: none;
+}
+.background-text h2{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50, -50);
+}
+
+.navbar.active{
+    top: 10%;
+}
+
+.background-text h2 span{
+    color: #ffc61a;
+}
+
+.home-container{
+    background: #ffc61a;
+    padding: 2rem 7%;
+    width: 100%;
+    
+    padding-top: 5.0rem;
+}
+.taxi-image{
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.taxi-image img{
+    width: 100%;
+    margin-top: 200px;
+}
+
+.home-content{
+    padding-top: 5.0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-content{
+    flex: 1 1 33rem;
+    padding: 2rem;
+}
+
+.inner-content h3{
+    font-size: 31px;
+}
+
+.inner-content h2{
+    font-size: 38px;
+}
+.inner-content p{
+    font-size: 1.2em;
+    padding-bottom: 1rem;
+}
+.inner-content .booknow{
+    padding: 1rem 3rem;
+    color: #000;
+    font-size: 1.2rem;
+    border: 1px solid;
+   
+}
+.inner-content a:hover{
+    padding: 1.0rem 2rem;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: white;
+}
+.form-heading{
+    background: #000;
+    padding: 1.1rem 0;
+    text-align: center; 
+}
+.form-heading h1{
+  color: #fff;
+  margin: 0;
+}
+.contact-form{
+    margin-top: 3rem;
+    width: 30rem;
+    background: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #fff;
+    font-size: 1.0rem;
+    margin: 0 auto;
+}
+
+.form-fields input{
+    padding: 1rem 0 3rem 1.0rem;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+
+
+.contact-form a{
+    background: #000;
+    width: 100%;
+    display: inline-block;
+    padding: 1.5rem 0;
+    font-size: 1.5;
+    color: white;
+}
+.submit{
+    padding-top: 1rem;
+}
+
+.main-tarrif{
+    padding: 3rem 5%;
+    height: 100vh;
+}
+.main-tarrif h1{
+    font-size: 38px;
+    text-align: center;
+}
+.main-tariff h1 span{
+    color: #ffc61a;
+}
+
+.inner-tarrif{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tarrif-container{
+    flex: 1 1 250px;
+    text-align: center;
+}
+/* note here */
+.tarrif-container img{
+    width: 50%;
+    margin-top: -50px;
+}
+.tarrif-container .inner-box h2{
+    font-size: 30px;
+}
+
+.tarrif-container .inner-box p{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.tarrif-container .inner-box h3{
+    color: #ffc61a;
+    font-size: 2rem;
+}
+.tarrif-container .inner-box a{
+ font-size: 1.2rem;
+ padding: 0.8rem 2rem;
+}
+
+.tarrif-container{
+
+    transition: all 0.7s;
+}
+
+.tarrif-container:nth-child(2){
+    background: #ffc61a;
+}
+
+.tarrif-container:hover{
+    background: #ffc61a;
+    transition: all 0.7s;
+}
+
+.heading-yellow{
+    color: #000;
+}
+
+.yellw-section{
+    color: black !important;
+}
+
+.tarrif-container a{
+    color: black;
+    background: #000;
+    padding: 1rem 2rem;
+    display: inline-block;
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.fast-booking{
+    margin-top: 4rem;
+    background:url(/Untitled\ design.png) ;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    padding-top: 2rem;
+}
+
+.fast-booking h1{
+    color: #ffc61a;
+    font-size: 38px;
+    text-align: center;
+}
+
+.fast-booking  h2{
+    font-size: 31px;
+    color:#fff ;
+    text-align: center;
+}
+
+    .inner-fast{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 3rem 3%;
+        height: ;
+    }
+
+    .booking-content{
+        flex: 1 1 35rem;
+    }
+
+    .booking-content{
+        color: #fff;
+        display: flex;
+        justify-content: center;
+       align-items: baseline;
+    }
+
+    .inner-fast-text h1{
+        font-size: 22px;
+        color: #ffc61a;
+        padding: 1.3rem;
+        }
+        .inner-fast-text p{
+            font-size: 1.2rem;
+            padding: 1.5rem;
+        }
+    .icon-fast{
+        background: #ffc61a;
+        width: 50px;
+        height: 40px;
+        border-radius: 150px;
+        text-align: center;
+    }
+
+    .icon-fast span{
+        line-height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .testimoniala{
+        background:url(/Untitledsmile\ design.png) ;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+
+    .testimoniala .head-test{
+        color: #ffc61a;
+        font-size: 38px;
+        text-align: center;
+    }
+    .main-testimonials{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 2rem 7%;
+    }
+    .inner-test{
+        flex: 1 1 35rem;
+        color: #fff;   
+        background: #000;
+        padding: 2rem;
+    }
+    .inner-test p{
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+    .clients{
+        display: flex;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+    @media (max-width:768px) {
+        html{
+            font-size: 50%;
+        }
+        #menu-bar{
+           
+            display: initial;
+        }
+    .navbar{
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+    }
+    .navbar a{
+        display: block;
+       font-size: 1.5rem;
+       background: #ffc61a;
+       color: white;
+       margin: 1rem;
+       padding: 1rem;
+    }
+    }

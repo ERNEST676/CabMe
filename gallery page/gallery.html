@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--custom css file link-->
+    <link rel="stylesheet" href="/gallery page/gallery.css">
+</head>
+<body>
+    <div class="container">
+        <a style="font-size: 24px;" href="/workind paths/index.html">Back to home</a>
+        <h1>My taxi Gallery</h1>
+            <div class="image-container">
+                
+                <div class="image"><img src="/gallery page/pic gallery/download (1).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (2).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (3).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (4).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (5).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (6).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download.jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/images (1).jpeg" alt=""></div>
+    
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="/gallery page/pic gallery/download (1).jpeg" alt="">
+                </div>
+        </div>
+        </div> 
+
+        <!---second section-->
+
+        <div class="container">
+            <h1>Our options</h1>
+                <div class="image-container">
+                    
+                    <div class="image"><img src="/gallery page/pic gallery/images (19).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/images (2).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/images (3).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/images (4).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/download (12).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/images (5).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/images (6).jpeg" alt=""></div>
+                    <div class="image"><img src="/gallery page/pic gallery/images (7).jpeg" alt=""></div>
+        
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="/gallery page/pic gallery/download (1).jpeg" alt="">
+                    </div>
+            </div>
+            </div> 
+        
+    <!--third-->
+
+    <div class="container">
+        <h1>We are here to Service you</h1>
+            <div class="image-container">
+                
+                <div class="image"><img src="/gallery page/pic gallery/images (6).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/images (8).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/images (9).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/images.jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/image(10).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (11).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (12).jpeg" alt=""></div>
+                <div class="image"><img src="/gallery page/pic gallery/download (13).jpeg" alt=""></div>
+    
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="/gallery page/pic gallery/download (1).jpeg" alt="">
+                </div>
+        </div>
+    
+    
+     
+        </div> 
+    
+
+   <script>
+    document.querySelectorAll('.image-container img').forEach(image =>{
+        image.onclick =() =>{
+            document.querySelector('.popup-image').style.display ='block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+
+    document.querySelector('.popup-image span').onclick =() =>{
+        document.querySelector('.popup-image').style.display ='none';
+    }
+   </script>
+</body>
+</html>

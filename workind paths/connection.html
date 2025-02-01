@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USSD-like Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .ussd-container {
+            background-color: #222;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .ussd-message {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .ussd-input {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .ussd-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .ussd-button:disabled {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="ussd-container" id="ussdContainer">
+    <h1>Welcome to CabMe!</h1>
+    <div id="ussdMessage" class="ussd-message">Dial <strong>*126#</strong> to get started</div>
+    <div id="ussdOptions" style="display:none;">
+        <div class="ussd-message" id="menuMessage">Choose an option:</div>
+        <div class="ussd-message" id="option1">1. Book a Cab</div>
+        <div class="ussd-message" id="option2">2. View Available Cars</div>
+        <div class="ussd-message" id="option3">3. Cancel Booking</div>
+    </div>
+    <input type="text" id="ussdInput" class="ussd-input" placeholder="Enter option" style="display:none;">
+    <button class="ussd-button" id="ussdButton" onclick="handleInput()" style="display:none;">Submit</button>
+</div>
+
+<script>
+    let currentStep = 0;
+    let pickupLocation = '';
+    let destination = '';
+
+    // Function to handle the user's input
+    function handleInput() {
+        const input = document.getElementById("ussdInput").value.trim();
+        const ussdMessage = document.getElementById("ussdMessage");
+        const ussdOptions = document.getElementById("ussdOptions");
+        const ussdInput = document.getElementById("ussdInput");
+        const ussdButton = document.getElementById("ussdButton");
+
+        if (currentStep === 0) {
+            if (input === '1') {
+                currentStep = 1;
+                ussdMessage.innerHTML = 'Enter your pickup location:';
+                ussdOptions.style.display = 'none';
+                ussdInput.style.display = 'block';
+                ussdInput.value = '';
+            } else if (input === '2') {
+                currentStep = 2;
+                ussdMessage.innerHTML = 'Available Cars:\n1. Economy - $5\n2. Business - $10\n3. Luxury - $20\nChoose car:';
+                ussdOptions.style.display = 'none';
+                ussdInput.style.display = 'block';
+                ussdInput.value = '';
+            } else if (input === '3') {
+                currentStep = 3;
+                ussdMessage.innerHTML = 'Booking canceled.';
+                ussdOptions.style.display = 'none';
+                ussdInput.style.display = 'none';
+                ussdButton.style.display = 'none';
+            } else {
+                ussdMessage.innerHTML = 'Invalid option. Please try again.';
+            }
+        } else if (currentStep === 1) {
+            pickupLocation = input;
+            currentStep = 2;
+            ussdMessage.innerHTML = `Your pickup location is set to: ${pickupLocation}. Enter destination:`;
+            ussdInput.value = '';
+        } else if (currentStep === 2) {
+            destination = input;
+            currentStep = 3;
+            ussdMessage.innerHTML = `Your cab is booked from ${pickupLocation} to ${destination}. Thank you for booking with CabMe!`;
+            ussdInput.style.display = 'none';
+            ussdButton.style.display = 'none';
+        }
+    }
+
+    // Show the main menu after initial greeting
+    setTimeout(() => {
+        document.getElementById("ussdMessage").innerHTML = 'Choose an option below:';
+        document.getElementById("ussdOptions").style.display = 'block';
+        document.getElementById("ussdInput").style.display = 'block';
+        document.getElementById("ussdButton").style.display = 'block';
+    }, 3000);
+</script>
+
+</body>
+</html>
